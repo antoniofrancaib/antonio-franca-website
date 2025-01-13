@@ -8,7 +8,7 @@ export const Projects = () => {
     {
       title: "Enhancing Memory Storage in Neuronal Networks",
       description: "Project developed as part of my research internship supervised by Dr Alex Roxin at CRM Barcelona, and Prof Daniele Avitabile at VU Amsterdam, Spring 2024.",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/4e6d40df-bfbb-42c6-8c60-b0f13acaf65f.png",
       links: {
         github: "https://github.com/antoniofrancaib/quenched-variability-role",
         project: "../assets/pdf/quenched-variability-role.pdf"
@@ -17,7 +17,7 @@ export const Projects = () => {
     {
       title: "Segmenting Glomeruli Functional Tissue Units",
       description: "Project developed as part of the final project for the Machine Learning (CZ4041) class by Prof Ke Yiping, Kelly at NTU Singapore, Fall 2023.",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/e8485e54-54e6-4ac4-9cd2-34c8ac86872f.png",
       links: {
         github: "https://github.com/antoniofrancaib/hacking-the-kidney/tree/main",
         project: "../assets/pdf/hacking-kidney.pdf"
@@ -26,7 +26,7 @@ export const Projects = () => {
     {
       title: "Cross-Domain Sentiment Classification",
       description: "Project developed as part of the final project for the Deep Learning & Neural Networks (CZ4042) class by Prof Jagath Rajapakse at NTU Singapore, Fall 2023.",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/7188c766-e31d-4cc0-883a-3bd4323328dd.png",
       links: {
         project: "../assets/pdf/cross-domain.pdf",
         notes: "../assets/pdf/dl-notes.pdf"
@@ -35,7 +35,7 @@ export const Projects = () => {
     {
       title: "On the Amari Neural Field Equation",
       description: "Project developed as part of an independent study supervised by Prof Daniele Avitabile at VU Amsterdam, Spring 2022.",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/443baf7b-ceb7-4978-89ac-a31c436f0283.png",
       links: {
         project: "../assets/pdf/math-neuroscience.pdf"
       }
