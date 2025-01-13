@@ -1,15 +1,13 @@
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
 import { Navigation } from "@/components/Navigation";
+import { CV as CVComponent } from "@/components/CV";
 
-const Index = () => {
+const CV = () => {
   return (
     <div className="min-h-screen bg-background pt-16">
       <Navigation />
-      <Hero />
-      <About />
+      <CVComponent />
     </div>
   );
 };
 
-export default Index;
+export default CV;
