@@ -1,31 +1,44 @@
 import { motion } from "framer-motion";
-import { Brain, Code, Network, Cpu } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Neural Memory Enhancement",
-      description: "Research project on synaptic connectivity in recurrent neural networks, focusing on the CA3 region of the hippocampus.",
-      icon: Brain,
-      tags: ["Neural Networks", "Memory Systems", "Computational Neuroscience"]
+      title: "Enhancing Memory Storage in Neuronal Networks",
+      description: "Project developed as part of my research internship supervised by Dr Alex Roxin at CRM Barcelona, and Prof Daniele Avitabile at VU Amsterdam, Spring 2024.",
+      image: "/placeholder.svg", // Replace with actual image path
+      links: {
+        github: "https://github.com/antoniofrancaib/quenched-variability-role",
+        project: "../assets/pdf/quenched-variability-role.pdf"
+      }
     },
     {
-      title: "altan.ai",
-      description: "Co-founded startup focused on automating workflows using artificial intelligence and machine learning.",
-      icon: Cpu,
-      tags: ["AI", "Automation", "Startup"]
+      title: "Segmenting Glomeruli Functional Tissue Units",
+      description: "Project developed as part of the final project for the Machine Learning (CZ4041) class by Prof Ke Yiping, Kelly at NTU Singapore, Fall 2023.",
+      image: "/placeholder.svg", // Replace with actual image path
+      links: {
+        github: "https://github.com/antoniofrancaib/hacking-the-kidney/tree/main",
+        project: "../assets/pdf/hacking-kidney.pdf"
+      }
     },
     {
-      title: "Boundary Dynamics Modeling",
-      description: "Research internship project modeling the boundary dynamics of neural networks at Artificial Neural Computing.",
-      icon: Network,
-      tags: ["Neural Networks", "Dynamic Systems", "Research"]
+      title: "Cross-Domain Sentiment Classification",
+      description: "Project developed as part of the final project for the Deep Learning & Neural Networks (CZ4042) class by Prof Jagath Rajapakse at NTU Singapore, Fall 2023.",
+      image: "/placeholder.svg", // Replace with actual image path
+      links: {
+        project: "../assets/pdf/cross-domain.pdf",
+        notes: "../assets/pdf/dl-notes.pdf"
+      }
     },
     {
-      title: "Educational Resources Platform",
-      description: "Development of interactive materials for mathematics courses as Teaching Assistant at VU Amsterdam.",
-      icon: Code,
-      tags: ["Education", "Mathematics", "Web Development"]
+      title: "On the Amari Neural Field Equation",
+      description: "Project developed as part of an independent study supervised by Prof Daniele Avitabile at VU Amsterdam, Spring 2022.",
+      image: "/placeholder.svg", // Replace with actual image path
+      links: {
+        project: "../assets/pdf/math-neuroscience.pdf"
+      }
     }
   ];
 
@@ -39,8 +52,10 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-primary mb-12">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h2 className="text-3xl font-bold text-primary mb-4">Publications</h2>
+          <p className="text-lg text-muted-foreground mb-12">Some of the projects I worked on.</p>
+          
+          <div className="grid grid-cols-1 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -48,21 +63,52 @@ export const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-lg bg-white hover:shadow-lg transition-shadow"
               >
-                <project.icon className="w-8 h-8 text-accent mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 text-sm rounded-full bg-accent/10 text-accent"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <Card>
+                  <div className="md:flex">
+                    <div className="md:w-1/3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} Project Image`}
+                        className="w-full h-48 object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                      />
+                    </div>
+                    <div className="md:w-2/3">
+                      <CardHeader>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardDescription>{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex gap-4 flex-wrap">
+                          {project.links.github && (
+                            <Button variant="outline" size="sm" asChild>
+                              <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="mr-2 h-4 w-4" />
+                                GitHub
+                              </a>
+                            </Button>
+                          )}
+                          {project.links.project && (
+                            <Button variant="outline" size="sm" asChild>
+                              <a href={project.links.project} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="mr-2 h-4 w-4" />
+                                Project
+                              </a>
+                            </Button>
+                          )}
+                          {project.links.notes && (
+                            <Button variant="outline" size="sm" asChild>
+                              <a href={project.links.notes} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="mr-2 h-4 w-4" />
+                                Notes
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      </CardContent>
+                    </div>
+                  </div>
+                </Card>
               </motion.div>
             ))}
           </div>
