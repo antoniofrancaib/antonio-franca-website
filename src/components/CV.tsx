@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Award } from "lucide-react";
+import { GraduationCap, Briefcase, Award, FileDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const CV = () => {
   return (
@@ -12,7 +13,18 @@ export const CV = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-primary mb-12">Curriculum Vitae</h2>
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-3xl font-bold text-primary">Curriculum Vitae</h2>
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2"
+              onClick={() => window.open('https://antoniofrancaib.github.io/assets/pdf/cv.pdf', '_blank')}
+            >
+              <FileDown className="w-4 h-4" />
+              Download CV
+            </Button>
+          </div>
           
           <div className="space-y-12">
             <div>
