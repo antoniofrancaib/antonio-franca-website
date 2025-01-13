@@ -18,7 +18,19 @@ export const Hero = () => {
           />
         ))}
       </div>
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8"
+        >
+          <img
+            src="/lovable-uploads/a491ad23-e401-4749-af51-70848695f435.png"
+            alt="Profile"
+            className="w-48 h-48 rounded-full border-4 border-white shadow-lg object-cover"
+          />
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

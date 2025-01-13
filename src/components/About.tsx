@@ -14,10 +14,16 @@ export const About = () => {
           <h2 className="text-3xl font-bold text-primary mb-8">About Me</h2>
           <div className="space-y-6 text-lg text-gray-700">
             <p>
-              I am an MPhil student in Machine Learning and Machine Intelligence at Cambridge University. My academic journey began with a BSc in Mathematics at VU Amsterdam, where I completed my thesis in collaboration with CRM Barcelona, focusing on how variability in synaptic connectivity can enhance memory storage capabilities of recurrent neural networks, specifically in the CA3 region of the hippocampus.
+              I am Antonio, an MPhil student in Machine Learning and Machine Intelligence at Cambridge University. Before starting my master's, I completed a BSc in Mathematics at VU Amsterdam, where I worked on my thesis in collaboration with CRM Barcelona, researching how variability in synaptic connectivity can enhance the memory storage capabilities of recurrent neural networks (CA3 region of the hippocampus).
             </p>
             <p>
-              During my academic career, I completed a research internship at Artificial Neural Computing, where I focused on modeling the boundary dynamics of neural networks. I also co-founded altan.ai, a startup aimed at automating workflows using AI, and served as a Teaching Assistant at VU Amsterdam, teaching courses in Single Variable Calculus, Probability Theory, and Linear Algebra.
+              I also completed a research internship at Artificial Neural Computing, focusing on modeling the boundary dynamics of neural networks. Additionally, I co-founded altan.ai, a startup aimed at automating workflows using AI, and I had the opportunity to teach courses in Single Variable Calculus, Probability Theory, and Linear Algebra as a Teaching Assistant at VU Amsterdam.
+            </p>
+            <p>
+              I am interested in exploring the computational principles of natural and artificial intelligence, aiming to "reverse engineer" the brain's algorithms, both to learn about how our brains work and to build more effective AI systems. In the long term, my goal is to leverage AI to help people gain greater agency over their circumstances and reach their full potential.
+            </p>
+            <p>
+              I particularly want to focus my research on areas such as neural representations and computational dynamics in the brain, learning algorithms that enable continual and efficient skill acquisition, meta-learning and online learning frameworks, understanding the theoretical underpinnings of deep learning, studying knowledge representation and hierarchical abstraction in neural networks, and advancing reinforcement learning techniques for adaptive behavior.
             </p>
           </div>
         </motion.div>
