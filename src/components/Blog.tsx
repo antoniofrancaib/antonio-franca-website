@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Brain, Code } from "lucide-react";
+import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Blog = () => {
@@ -9,21 +9,6 @@ export const Blog = () => {
       title: "Don't Break Your Windows",
       icon: Brain,
       date: "December, 2024"
-    },
-    {
-      title: "Neural Network Architectures for Memory",
-      icon: Brain,
-      date: "March 15, 2024"
-    },
-    {
-      title: "The Future of Meta-Learning",
-      icon: Code,
-      date: "March 1, 2024"
-    },
-    {
-      title: "Computational Neuroscience Insights",
-      icon: BookOpen,
-      date: "February 15, 2024"
     }
   ];
 
@@ -39,17 +24,17 @@ export const Blog = () => {
         >
           <h2 className="text-3xl font-bold text-primary mb-12">Latest Posts</h2>
           <div className="grid gap-8">
-            {posts.map((post, index) => (
+            {posts.map((post) => (
               <motion.article
                 key={post.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 className="p-6 rounded-lg bg-muted hover:shadow-lg transition-shadow"
               >
                 <Link 
-                  to={post.id ? `/blog/${post.id}` : "#"} 
+                  to={`/blog/${post.id}`} 
                   className="flex items-start gap-4 group"
                 >
                   <post.icon className="w-6 h-6 text-accent mt-1" />
