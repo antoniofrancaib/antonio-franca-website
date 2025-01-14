@@ -1,7 +1,13 @@
-import { BlogPost } from "@/components/BlogPost";
+import { Blog as BlogComponent } from "@/components/Blog";
+import { Navigation } from "@/components/Navigation";
 
 const Blog = () => {
-  return <BlogPost />;
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <BlogComponent />
+    </div>
+  );
 };
 
 export default Blog;
