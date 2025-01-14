@@ -11,7 +11,10 @@ export const BlogPost = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const response = await fetch(`/src/content/blog/${id}.md`);
+        const response = await fetch(`/content/blog/${id}.md`);
+        if (!response.ok) {
+          throw new Error(`Failed to load blog post: ${response.statusText}`);
+        }
         const text = await response.text();
         setContent(text);
       } catch (error) {
