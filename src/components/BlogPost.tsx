@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { Navigation } from "./Navigation";
+import { useParams, Navigate } from "react-router-dom";
 
 export const BlogPost = () => {
+  const { id } = useParams();
+
+  // For now, we only have one blog post
+  if (id !== "dont-break-your-windows") {
+    return <Navigate to="/blog" replace />;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

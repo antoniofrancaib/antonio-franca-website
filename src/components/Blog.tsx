@@ -1,23 +1,27 @@
 import { motion } from "framer-motion";
 import { BookOpen, Brain, Code } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Blog = () => {
   const posts = [
     {
+      id: "dont-break-your-windows",
+      title: "Don't Break Your Windows",
+      icon: Brain,
+      date: "December, 2024"
+    },
+    {
       title: "Neural Network Architectures for Memory",
-      excerpt: "Exploring how different neural network architectures can enhance memory capabilities...",
       icon: Brain,
       date: "March 15, 2024"
     },
     {
       title: "The Future of Meta-Learning",
-      excerpt: "Investigating adaptive learning systems and their potential applications...",
       icon: Code,
       date: "March 1, 2024"
     },
     {
       title: "Computational Neuroscience Insights",
-      excerpt: "Recent discoveries in brain plasticity and their implications for AI...",
       icon: BookOpen,
       date: "February 15, 2024"
     }
@@ -44,14 +48,18 @@ export const Blog = () => {
                 viewport={{ once: true }}
                 className="p-6 rounded-lg bg-muted hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start gap-4">
+                <Link 
+                  to={post.id ? `/blog/${post.id}` : "#"} 
+                  className="flex items-start gap-4 group"
+                >
                   <post.icon className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                    <p className="text-gray-600 mb-2">{post.excerpt}</p>
+                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
                     <span className="text-sm text-gray-500">{post.date}</span>
                   </div>
-                </div>
+                </Link>
               </motion.article>
             ))}
           </div>
