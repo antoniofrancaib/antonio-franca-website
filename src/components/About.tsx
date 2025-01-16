@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 export const About = () => {
   return (
     <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-12">
-        {/* Left column with image and titles (40%) */}
-        <div className="flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-2/5">
+      <div className="flex flex-col items-center md:block">
+        {/* Top section with image and titles (centered) */}
+        <div className="flex flex-col items-center mb-8 md:mb-12 md:float-left md:w-2/5 md:mr-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center md:text-left"
+            className="text-center"
           >
             <h2 className="text-xl font-bold mb-2">
               Machine Learning at Cambridge University
@@ -33,12 +33,11 @@ export const About = () => {
           </motion.div>
         </div>
 
-        {/* Right column with bio (60%) */}
+        {/* Text content that will wrap around the image on desktop */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="md:w-3/5"
         >
           <div className="prose prose-lg">
             <p>
