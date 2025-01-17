@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Mail, Linkedin, Github } from "lucide-react";
+import { Button } from "./ui/button";
 
 export const About = () => {
   return (
@@ -30,6 +32,53 @@ export const About = () => {
             <p className="text-base text-gray-600 italic">
               Striving to exploit the plasticity of the human brain
             </p>
+          </motion.div>
+          
+          {/* Social Networks */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col gap-2 mt-4 w-full max-w-xs"
+          >
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2"
+              asChild
+            >
+              <a href="mailto:antoniofrancaib@gmail.com">
+                <Mail className="h-4 w-4" />
+                Email
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2"
+              asChild
+            >
+              <a
+                href="https://www.linkedin.com/in/antonio-franca-ibáñez-a37623198/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2"
+              asChild
+            >
+              <a
+                href="https://github.com/antoniofrancaib"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </a>
+            </Button>
           </motion.div>
         </div>
 
