@@ -52,7 +52,7 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-primary mb-4">Publications</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">Projects</h2>
           <p className="text-lg text-muted-foreground mb-12">Some of the projects I worked on.</p>
           
           <div className="grid grid-cols-1 gap-8">

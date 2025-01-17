@@ -13,8 +13,10 @@ export const CV = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
+          <h2 className="text-3xl font-bold text-primary mb-4">Curriculum Vitae</h2>
+          <p className="text-lg text-muted-foreground mb-12">Summary of my education and experience so far.</p>
+          
           <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">Curriculum Vitae</h2>
             <Button
               variant="outline"
               size="lg"

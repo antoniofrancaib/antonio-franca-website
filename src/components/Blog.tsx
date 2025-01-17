@@ -22,7 +22,8 @@ export const Blog = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-primary mb-12">Latest Posts</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">Blog</h2>
+          <p className="text-lg text-muted-foreground mb-12">A collection of my thoughts and writings.</p>
           <div className="grid gap-8">
             {posts.map((post) => (
               <motion.article
