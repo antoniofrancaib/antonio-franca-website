@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -17,7 +17,7 @@ export const Navigation = () => {
       <Link to="/blog" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Blog</Link>
       <Link to="/projects" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Projects</Link>
       <Link to="/cv" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">CV</Link>
-      <Tooltip>
+      <Tooltip delayDuration={0}>
         <TooltipTrigger asChild>
           <Button
             variant="ghost"
@@ -30,7 +30,7 @@ export const Navigation = () => {
             <span className="sr-only">Toggle theme</span>
           </Button>
         </TooltipTrigger>
-        <TooltipContent>
+        <TooltipContent side="bottom">
           <p>Toggle theme</p>
         </TooltipContent>
       </Tooltip>
