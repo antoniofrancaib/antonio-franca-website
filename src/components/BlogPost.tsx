@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export const BlogPost = () => {
   const { id } = useParams();
   const [content, setContent] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -16,7 +17,16 @@ export const BlogPost = () => {
           throw new Error(`Failed to load blog post: ${response.statusText}`);
         }
         const text = await response.text();
-        setContent(text);
+        
+        // Extract title from frontmatter
+        const titleMatch = text.match(/title: (.+)/);
+        if (titleMatch) {
+          setTitle(titleMatch[1]);
+        }
+
+        // Remove frontmatter from content
+        const contentWithoutFrontmatter = text.split('---')[2];
+        setContent(contentWithoutFrontmatter);
       } catch (error) {
         console.error("Error loading blog post:", error);
       }
@@ -25,7 +35,6 @@ export const BlogPost = () => {
     fetchContent();
   }, [id]);
 
-  // For now, we only have one blog post
   if (id !== "dont-break-your-windows") {
     return <Navigate to="/blog" replace />;
   }
@@ -40,6 +49,7 @@ export const BlogPost = () => {
           transition={{ duration: 0.5 }}
           className="prose prose-lg max-w-3xl mx-auto"
         >
+          <h1 className="text-4xl font-bold mb-8">{title}</h1>
           <ReactMarkdown>{content}</ReactMarkdown>
         </motion.article>
       </main>

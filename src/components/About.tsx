@@ -6,7 +6,6 @@ export const About = () => {
   return (
     <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="flex flex-col items-center md:block">
-        {/* Top section with image and titles (centered) */}
         <div className="flex flex-col items-center mb-8 md:mb-12 md:float-left md:w-2/5 md:mr-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,12 +33,11 @@ export const About = () => {
             </p>
           </motion.div>
           
-          {/* Social Networks */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex gap-2 mt-4"
+            className="flex gap-2 mt-4 mb-4"
           >
             <Button
               variant="ghost"
@@ -84,7 +82,6 @@ export const About = () => {
           </motion.div>
         </div>
 
-        {/* Text content that will wrap around the image on desktop */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
