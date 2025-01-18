@@ -39,44 +39,46 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col gap-2 mt-4 w-full max-w-xs"
+            className="flex gap-2 mt-4"
           >
             <Button
-              variant="outline"
-              className="w-full justify-start gap-2"
+              variant="ghost"
+              size="icon"
+              className="hover:bg-accent"
               asChild
             >
-              <a href="mailto:antoniofrancaib@gmail.com">
-                <Mail className="h-4 w-4" />
-                Email
+              <a href="mailto:antoniofrancaib@gmail.com" aria-label="Email">
+                <Mail className="h-5 w-5" />
               </a>
             </Button>
             <Button
-              variant="outline"
-              className="w-full justify-start gap-2"
+              variant="ghost"
+              size="icon"
+              className="hover:bg-accent"
               asChild
             >
               <a
                 href="https://www.linkedin.com/in/antonio-franca-ibáñez-a37623198/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="h-4 w-4" />
-                LinkedIn
+                <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button
-              variant="outline"
-              className="w-full justify-start gap-2"
+              variant="ghost"
+              size="icon"
+              className="hover:bg-accent"
               asChild
             >
               <a
                 href="https://github.com/antoniofrancaib"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
-                <Github className="h-4 w-4" />
-                GitHub
+                <Github className="h-5 w-5" />
               </a>
             </Button>
           </motion.div>
